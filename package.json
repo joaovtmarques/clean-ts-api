@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start:dev": "ts-node-dev --transpile-only -r tsconfig-paths/register src/index.ts -e ts",
     "husky:prepare": "husky install",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn jest --watch",
@@ -28,6 +29,7 @@
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.2",
     "ts-jest": "^29.0.5",
+    "ts-node-dev": "^2.0.0",
     "typescript": "*"
   },
   "dependencies": {}
