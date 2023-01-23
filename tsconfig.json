@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2021" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "module": "commonjs" /* Specify what module code is generated. */ /* Disallow 'import's, 'require's or '<reference>'s from expanding the number of files TypeScript should add to a project. */,
-    "rootDir": "src",
+    "rootDir": ".",
     "baseUrl": ".",
     "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
     "outDir": "./dist" /* Specify an output folder for all emitted files. */,
@@ -16,5 +16,5 @@
     },
     "resolveJsonModule": true
   },
-  "include": ["src", "test"]
+  "include": ["*", "src", "test"]
 }
