@@ -14,7 +14,7 @@ module.exports = {
   rules: {
     'no-undef': 'off',
     'prettier/prettier': ['error'],
-    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'no-console': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
