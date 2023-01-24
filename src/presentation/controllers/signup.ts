@@ -3,6 +3,7 @@ export class SignUpController {
     return {
       statusCode: 400,
       any: httpRequest,
+      body: new Error('Missing param: name'),
     };
   }
 }
