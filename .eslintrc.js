@@ -13,12 +13,12 @@ module.exports = {
   },
   rules: {
     'no-undef': 'off',
-    'prettier/prettier': ['error'],
-    '@typescript-eslint/no-explicit-any': 'off',
+    'endOfLine': 'off',
     'no-console': 'error',
     'no-unused-vars': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    'endOfLine': 'off',
     'prettier/prettier': [
       'error',
       {
