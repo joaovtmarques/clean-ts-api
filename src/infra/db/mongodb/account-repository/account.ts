@@ -6,26 +6,19 @@ import { MongoAccount } from '../protocols/mongo';
 
 export class AccountMongoRepository implements AddAccountRepository {
   async add(accountData: AddAccountModel): Promise<AccountModel> {
-    const accountCollection = MongoHelper.getClient();
+    const client = MongoHelper.getClient();
 
-    const { insertedId } = await accountCollection
-      .db()
-      .collection('accounts')
-      .insertOne(accountData);
+    const { insertedId } = await MongoHelper.getCollection(
+      'accounts'
+    ).insertOne(accountData);
 
-    const account = await accountCollection
+    const account = await client
       .db()
       .collection<MongoAccount>('accounts')
       .findOne({
         _id: insertedId,
       });
 
-    if (!account) {
-      throw new Error('Account not created');
-    }
-
-    const { _id, ...rest } = account;
-
-    return { id: _id.toHexString(), ...rest };
+    return MongoHelper.map(account);
   }
 }

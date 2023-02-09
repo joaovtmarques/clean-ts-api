@@ -21,4 +21,10 @@ export const MongoHelper = {
   getClient(): MongoClient {
     return this.client;
   },
+
+  map: (collection: any): any => {
+    const { _id, ...rest } = collection;
+
+    return { id: _id.toHexString(), ...rest };
+  },
 };
